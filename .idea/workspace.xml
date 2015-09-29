@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d829ec5-545b-4f9e-843e-f470d2d68027" name="Default" comment="" />
+    <list default="true" id="3d829ec5-545b-4f9e-843e-f470d2d68027" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="cluster-consumer.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -514,12 +516,12 @@
       <created>1443555143134</created>
       <option name="number" value="Default" />
       <updated>1443555143134</updated>
-      <workItem from="1443555144343" duration="774000" />
+      <workItem from="1443555144343" duration="957000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="774000" />
+    <option name="totallyTimeSpent" value="957000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
