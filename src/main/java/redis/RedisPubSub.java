@@ -6,13 +6,18 @@ import org.yaml.snakeyaml.Yaml;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileReader;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class RedisPubSub {
   public static Map yamlMap;
   public static final Logger logger = LoggerFactory.getLogger(RedisPubSub.class);
+  public static Set<String> popularProductsSet ;
 
   //read yaml file to get the map
   private static void readYAML(){
@@ -25,9 +30,36 @@ public class RedisPubSub {
     }
   }
 
+  //generate Hash set from the csv
+  private static Set<String> generatePopularProductSet(){
+    Set<String> productIdSet = new HashSet<String>();
+    FileReader fileReader = null;
+    BufferedReader bufferedReader = null;
+    try {
+      fileReader = new FileReader(new File((String)yamlMap.get("popular_products_file_path")));
+      bufferedReader = new BufferedReader(fileReader);
+      String line = bufferedReader.readLine();
+      while ((line = bufferedReader.readLine()) != null) {
+        String productId = line;
+        productIdSet.add(productId);
+      }
+    } catch (Exception e) {
+      logger.error("Error in generating popular products" +e.getMessage());
+    } finally {
+      try {
+        fileReader.close();
+        bufferedReader.close();
+      } catch (Exception e) {
+        logger.error(e.getMessage());
+      }
+    }
+    return productIdSet;
+  }
+
   public static void main(String[] args) throws Exception {
 
     readYAML();
+    popularProductsSet = generatePopularProductSet();
     JedisPool jedispool = new JedisPool((String)yamlMap.get("redis_host"));
     final Jedis subscriberJedis = jedispool.getResource();
     final Subscriber subscriber = new Subscriber();

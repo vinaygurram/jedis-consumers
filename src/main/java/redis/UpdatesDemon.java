@@ -57,12 +57,15 @@ public class UpdatesDemon{
   }
 
 
-  public HashMap<String,Integer> getCoverageOfCluster(String clusterId){
+  public HashMap<String,Double> getCoverageOfCluster(String clusterId){
 
-    HashMap<String,Integer> coverageMap = new HashMap<String, Integer>();
-    coverageMap.put("product_coverage", 0 );
-    coverageMap.put("sub_cat_coverage", 0 );
+    HashMap<String,Double> coverageMap = new HashMap<String, Double>();
+    coverageMap.put("product_coverage", 0d );
+    coverageMap.put("sub_cat_coverage", 0d );
+    coverageMap.put("rank",0d);
+
     try {
+      Set<String> productsSet = new HashSet<>();
       String listing_search_api =(String)RedisPubSub.yamlMap.get("listing_search_api") ;
       String[] stores  = clusterId.split("-");
       String storeIdString = "";
@@ -70,27 +73,43 @@ public class UpdatesDemon{
         storeIdString += "\""+s+"\",";
       }
       storeIdString = storeIdString.substring(0,storeIdString.length()-1);
-      String query= "{\"size\":0,\"query\":{\"terms\":{\"store.id\":["+storeIdString+"]}}," +
-          "\"aggregations\":{\"product_coverage\":{\"cardinality\":{\"field\":\"product.id\"}}," +
-          "\"sub_cat_coverage\":{\"cardinality\":{\"field\":\"product.sub_cat_id\"}}}}";
-
-      query = "{\"size\":0,\"query\":{\"bool\":{\"must\":[" +
-          "{\"terms\":{\"store_details.id\":[\""+storeIdString+"\"]}}," +
-          "{\"term\":{\"product_details.available\":\"true\"}}," +
-          "{\"term\":{\"product_details.status\":\"current\"}}]}}," +
-          "\"aggregations\":{\"product_coverage\":{\"cardinality\":{\"field\":\"product_details.id\"}}," +
-          "\"sub_cat_coverage\":{\"cardinality\":{\"field\":\"product_details.sub_category_id\"}}}}";
+//      String query= "{\"size\":0,\"query\":{\"terms\":{\"store.id\":["+storeIdString+"]}}," +
+//          "\"aggregations\":{\"product_coverage\":{\"cardinality\":{\"field\":\"product.id\"}}," +
+//          "\"sub_cat_coverage\":{\"cardinality\":{\"field\":\"product.sub_cat_id\"}}}}";
+//
+//      query = "{\"size\":0,\"query\":{\"bool\":{\"must\":[" +
+//          "{\"terms\":{\"store_details.id\":[\""+storeIdString+"\"]}}," +
+//          "{\"term\":{\"product_details.available\":\"true\"}}," +
+//          "{\"term\":{\"product_details.status\":\"current\"}}]}}," +
+//          "\"aggregations\":{\"product_coverage\":{\"cardinality\":{\"field\":\"product_details.id\"}}," +
+//          "\"sub_cat_coverage\":{\"cardinality\":{\"field\":\"product_details.sub_category_id\"}}}}";
+      String query = "{\"size\": 0,\"query\":{\"filtered\":{\"filter\":{\"bool\":{\"must\":[" +
+          "{\"terms\":{\"store_details.id\":["+storeIdString+"]}}," +
+          "{\"term\":{\"product_details.available\":true}}," +
+          "{\"term\":{\"product_details.status\":\"current\"}}]}}}}," +
+          "\"aggregations\":{\"unique_products\":{\"terms\":{\"field\":\"product_details.id\",\"size\":0}}," +
+          "\"sub_cat_count\":{\"cardinality\":{\"field\":\"product_details.sub_category_id\"}}}}";
 
       HttpClient httpClient = HttpClientBuilder.create().build();
       HttpPost httpPost = new HttpPost(listing_search_api);
       httpPost.setEntity(new StringEntity(query));
       HttpResponse httpResponse = httpClient.execute(httpPost);
-      JSONObject resultObject = new JSONObject(EntityUtils.toString(httpResponse.getEntity()));
-      JSONObject aggrs = resultObject.getJSONObject("aggregations");
-      int subCatCov = aggrs.getJSONObject("sub_cat_coverage").getInt("value");
-      int productCov = aggrs.getJSONObject("product_coverage").getInt("value");
-      coverageMap.put("sub_cat_cov",subCatCov);
-      coverageMap.put("product_cov",productCov);
+      JSONObject result = new JSONObject(EntityUtils.toString(httpResponse.getEntity()));
+      JSONObject esResult = result.getJSONObject("aggregations");
+      JSONArray uniqueProdBuckets = esResult.getJSONObject("unique_products").getJSONArray("buckets");
+      for(int i=0;i<uniqueProdBuckets.length();i++){
+        String productId = uniqueProdBuckets.getJSONObject(i).getString("key");
+        productsSet.add(productId);
+      }
+      int subCatCount = esResult.getJSONObject("sub_cat_count").getInt("value");
+      Set<String> intesection = new HashSet<String>(productsSet);
+      intesection.retainAll(RedisPubSub.popularProductsSet);
+      int popular_products_count = intesection.size();
+      //compute rank
+      double rank = ((double) popular_products_count/(double)RedisPubSub.popularProductsSet.size());
+      coverageMap.put("sub_cat_cov",(double)subCatCount);
+      coverageMap.put("product_cov", (double) productsSet.size());
+      coverageMap.put("rank",rank);
     }catch (Exception e){
       RedisPubSub.logger.error(e.getMessage());
     }
@@ -113,7 +132,6 @@ public class UpdatesDemon{
           clearStores(updatedStores);
         }
 
-
         //active stores
         for(String activeStoreID: copyMap.get("active")){
           List<String> clusterIds = getClustersWithStoreId(activeStoreID);
@@ -132,13 +150,13 @@ public class UpdatesDemon{
           }
         }
 
-        //product coverage
+        //product coverage also updates rank
         for(String pchangeStoreId: copyMap.get("productChange")){
           List<String> clusterIds = getClustersWithStoreId(pchangeStoreId);
           for(String clusterId: clusterIds){
-            HashMap<String,Integer> coverageMap = getCoverageOfCluster(clusterId);
+            HashMap<String,Double> coverageMap = getCoverageOfCluster(clusterId);
             bulkDoc.append("{\"update\": {\"_id\" : \""+clusterId+"\"}}\n");
-            bulkDoc.append("{\"doc\": {\"product_count\":\""+coverageMap.get("product_cov")+"\",\"sub_cat_count\":\""+coverageMap.get("sub_cat_cov")+"\"}}\n");
+            bulkDoc.append("{\"doc\": {\"rank\":\""+coverageMap.get("rank")+"\",\"product_count\":\""+coverageMap.get("product_cov")+"\",\"sub_cat_count\":\""+coverageMap.get("sub_cat_cov")+"\"}}\n");
           }
         }
 
