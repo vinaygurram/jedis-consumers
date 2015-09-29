@@ -37,7 +37,7 @@ public class Subscriber extends JedisPubSub {
                 }
             }
         }catch (Exception e){
-            e.printStackTrace();
+          logger.error(e.getMessage());
         }
 
     }

@@ -16,7 +16,7 @@ public class Publisher
     }
     public void start(String channel_name)
     {
-        System.out.println("Type your message....exit for terminate");
+        RedisPubSub.logger.info("Type your message....exit for terminate");
         try
         {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -33,7 +33,7 @@ public class Publisher
             }
         }
         catch (IOException e) {
-            System.out.println("IO failure while reading input, e");
+          RedisPubSub.logger.error("IO failure while reading input,"+e.getMessage());
         }
     }
 }

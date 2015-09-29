@@ -1,0 +1,6 @@
+###configurations######
+redis_channel_name : cluster_store_update
+redis_host : localhost
+clusters_serach_api : http://localhost:9200/live_geo_clusters/geo_cluster/_search
+listing_search_api : http://localhost:9200/listing/list/_search
+clusters_bulk_api : http://localhost:9200/live_geo_clusters/geo_cluster/_bulk
