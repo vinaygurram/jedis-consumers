@@ -1,6 +1,0 @@
-redis/Publisher.class
-redis/UpdatesDemon.class
-redis/RedisPubSub$1.class
-redis/UpdatesDemon$1.class
-redis/Subscriber.class
-redis/RedisPubSub.class

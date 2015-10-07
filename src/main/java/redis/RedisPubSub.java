@@ -10,9 +10,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class RedisPubSub {
   public static Map yamlMap;
@@ -56,6 +54,10 @@ public class RedisPubSub {
     return productIdSet;
   }
 
+  public static List<String> getEvents(String topicName) {
+
+      return new ArrayList<>();
+  }
   public static void main(String[] args) throws Exception {
 
     readYAML();
