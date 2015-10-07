@@ -6,12 +6,13 @@ import java.util.concurrent.Callable;
 /**
  * Created by meetanshugupta on 07/10/15.
  */
-public interface Consumer extends Callable<String> {
+public interface Consumer {
 
     public ConsumerCategory getName();
 
     public List<Event> getApplicableEvents();
 
-    @Override
-    public String call();
+    public String processEvent(String event);
+
+    public String periodicallyExecute();
 }
