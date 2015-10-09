@@ -1,6 +1,6 @@
 package com.olastore.listing.consumers.definitions;
 
-import com.olastore.listing.consumers.lib.Consumer;
+import com.olastore.listing.consumers.lib.SubscribingConsumer;
 import com.olastore.listing.consumers.lib.ConsumerCategory;
 import com.olastore.listing.consumers.lib.Event;
 import com.olastore.listing.consumers.utils.AppConfigFinder;
@@ -22,9 +22,9 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * Created by meetanshugupta on 07/10/15.
  */
-public class StoreUpdateConsumer implements Consumer {
+public class StoreUpdateSubscribingConsumer implements SubscribingConsumer {
     public ConcurrentHashMap<String,Set<String>> updatedStores = new ConcurrentHashMap<String,Set<String>>();
-    private static Logger LOG = LoggerFactory.getLogger(StoreUpdateConsumer.class);
+    private static Logger LOG = LoggerFactory.getLogger(StoreUpdateSubscribingConsumer.class);
 
     @Override
     public ConsumerCategory getName() {

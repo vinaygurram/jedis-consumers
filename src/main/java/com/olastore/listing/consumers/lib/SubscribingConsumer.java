@@ -6,7 +6,7 @@ import java.util.concurrent.Callable;
 /**
  * Created by meetanshugupta on 07/10/15.
  */
-public interface Consumer {
+public interface SubscribingConsumer {
 
     public ConsumerCategory getName();
 

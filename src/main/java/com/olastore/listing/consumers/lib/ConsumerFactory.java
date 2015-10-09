@@ -1,6 +1,6 @@
 package com.olastore.listing.consumers.lib;
 
-import com.olastore.listing.consumers.definitions.StoreUpdateConsumer;
+import com.olastore.listing.consumers.definitions.StoreUpdateSubscribingConsumer;
 
 /**
  * Created by meetanshugupta on 07/10/15.
@@ -14,8 +14,8 @@ public class ConsumerFactory {
 
     }
 
-    public Consumer getConsumerInstance() {
+    public SubscribingConsumer getConsumerInstance() {
 
-        return new StoreUpdateConsumer();
+        return new StoreUpdateSubscribingConsumer();
     }
 }
