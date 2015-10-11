@@ -67,9 +67,9 @@ java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.Stri
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
 2015-10-11 22:17:25,122 INFO  App:App main 19 - welcome 
-2015-10-11 22:17:25,317 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-11 22:17:25,317 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
 2015-10-11 22:17:25,317 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 39 - Subscribing to channel null 
-2015-10-11 22:17:25,318 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
+2015-10-11 22:17:25,318 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
 2015-10-11 22:17:25,319 ERROR SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 59 - Exception {} 
 redis.clients.jedis.exceptions.JedisConnectionException: JedisPubSub is not subscribed to a Jedis instance.
 	at redis.clients.jedis.JedisPubSub.unsubscribe(JedisPubSub.java:49)
@@ -88,24 +88,24 @@ redis.clients.jedis.exceptions.JedisDataException: value sent to redis cannot be
 	at redis.clients.jedis.Jedis.subscribe(Jedis.java:2591)
 	at com.olastore.listing.consumers.scheduler.SubscriberLauncher$1.run(SubscriberLauncher.java:45)
 	at java.lang.Thread.run(Thread.java:745)
-2015-10-11 22:17:35,319 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:17:35,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:17:45,316 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:17:45,317 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:17:55,316 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:17:55,316 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:18:05,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:18:05,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:18:15,316 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:18:15,316 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:18:25,318 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:18:25,319 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:18:35,319 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:18:35,319 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
+2015-10-11 22:17:35,319 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:17:35,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:17:45,316 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:17:45,317 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:17:55,316 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:17:55,316 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:18:05,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:18:05,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:18:15,316 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:18:15,316 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:18:25,318 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:18:25,319 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:18:35,319 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:18:35,319 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
 2015-10-11 22:18:37,337 INFO  App:App main 19 - welcome 
-2015-10-11 22:18:37,506 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-11 22:18:37,506 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
 2015-10-11 22:18:37,506 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 39 - Subscribing to channel null 
-2015-10-11 22:18:37,507 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
+2015-10-11 22:18:37,507 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
 2015-10-11 22:18:37,509 ERROR SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher$1 run 47 - Exception happens {} 
 redis.clients.jedis.exceptions.JedisDataException: value sent to redis cannot be null
 	at redis.clients.util.SafeEncoder.encode(SafeEncoder.java:24)
@@ -114,81 +114,81 @@ redis.clients.jedis.exceptions.JedisDataException: value sent to redis cannot be
 	at redis.clients.jedis.Jedis.subscribe(Jedis.java:2591)
 	at com.olastore.listing.consumers.scheduler.SubscriberLauncher$1.run(SubscriberLauncher.java:45)
 	at java.lang.Thread.run(Thread.java:745)
-2015-10-11 22:18:45,319 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:18:45,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:18:47,508 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:18:47,509 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:18:55,317 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:18:55,318 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:18:57,507 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:18:57,507 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:19:05,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:19:05,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:19:07,506 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:19:07,507 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:19:15,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:19:15,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:19:17,509 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:19:17,510 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:19:25,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:19:25,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:19:27,509 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:19:27,510 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:19:35,319 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:19:35,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:19:37,505 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:19:37,509 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
+2015-10-11 22:18:45,319 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:18:45,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:18:47,508 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:18:47,509 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:18:55,317 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:18:55,318 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:18:57,507 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:18:57,507 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:19:05,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:19:05,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:19:07,506 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:19:07,507 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:19:15,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:19:15,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:19:17,509 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:19:17,510 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:19:25,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:19:25,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:19:27,509 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:19:27,510 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:19:35,319 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:19:35,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:19:37,505 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:19:37,509 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
 2015-10-11 22:19:43,088 INFO  App:App main 19 - welcome 
-2015-10-11 22:19:43,269 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-11 22:19:43,269 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
 2015-10-11 22:19:43,269 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 39 - Subscribing to channel cluster_updates 
-2015-10-11 22:19:43,270 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:19:45,319 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:19:45,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:19:47,506 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:19:47,507 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:19:53,269 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:19:53,270 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:19:55,319 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:19:55,319 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:19:57,508 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:19:57,509 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
+2015-10-11 22:19:43,270 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:19:45,319 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:19:45,320 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:19:47,506 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:19:47,507 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:19:53,269 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:19:53,270 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:19:55,319 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:19:55,319 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:19:57,508 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:19:57,509 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
 2015-10-11 22:27:32,386 INFO  App:App main 19 - welcome 
-2015-10-11 22:27:32,551 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-11 22:27:32,551 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
 2015-10-11 22:27:32,552 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 39 - Subscribing to channel cluster_updates 
-2015-10-11 22:27:32,553 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
+2015-10-11 22:27:32,553 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
 2015-10-11 22:27:40,634 ERROR ClustersSubscriber:com.olastore.listing.consumers.definitions.ClustersSubscriber onMessage 69 - Expected a ':' after a key at 12 [character 13 line 1] 
-2015-10-11 22:27:42,552 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:27:42,553 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:27:52,554 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:27:52,554 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:28:02,556 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:28:02,556 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:28:12,555 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:28:12,556 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:28:22,555 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:28:22,555 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:28:32,555 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:28:32,558 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:28:42,554 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:28:42,555 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:28:52,554 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:28:52,555 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
+2015-10-11 22:27:42,552 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:27:42,553 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:27:52,554 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:27:52,554 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:28:02,556 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:28:02,556 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:28:12,555 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:28:12,556 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:28:22,555 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:28:22,555 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:28:32,555 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:28:32,558 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:28:42,554 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:28:42,555 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:28:52,554 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:28:52,555 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
 2015-10-11 22:28:56,698 INFO  App:App main 19 - welcome 
-2015-10-11 22:28:56,870 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-11 22:28:56,870 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
 2015-10-11 22:28:56,870 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 39 - Subscribing to channel cluster_updates 
-2015-10-11 22:28:56,872 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:29:06,874 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:29:06,874 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
-2015-10-11 22:29:16,873 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
-2015-10-11 22:29:16,873 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
+2015-10-11 22:28:56,872 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:29:06,874 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:29:06,874 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-11 22:29:16,873 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
+2015-10-11 22:29:16,873 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
 2015-10-11 22:29:24,284 INFO  App:App main 19 - welcome 
-2015-10-11 22:29:24,454 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-11 22:29:24,454 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
 2015-10-11 22:29:24,454 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 39 - Subscribing to channel cluster_updates 
-2015-10-11 22:29:24,456 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
+2015-10-11 22:29:24,456 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
 2015-10-11 23:52:24,494 INFO  App:App main 19 - welcome 
-2015-10-11 23:52:24,665 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-11 23:52:24,665 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
 2015-10-11 23:52:24,665 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 39 - Subscribing to channel cluster_updates 
-2015-10-11 23:52:24,666 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
+2015-10-11 23:52:24,666 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
 2015-10-11 23:52:24,667 ERROR SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 59 - Exception {} 
 redis.clients.jedis.exceptions.JedisConnectionException: JedisPubSub is not subscribed to a Jedis instance.
 	at redis.clients.jedis.JedisPubSub.unsubscribe(JedisPubSub.java:49)
@@ -200,9 +200,9 @@ redis.clients.jedis.exceptions.JedisConnectionException: JedisPubSub is not subs
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
 2015-10-11 23:52:48,172 INFO  App:App main 19 - welcome 
-2015-10-11 23:52:48,340 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-11 23:52:48,340 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
 2015-10-11 23:52:48,341 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 39 - Subscribing to channel cluster_updates 
-2015-10-11 23:52:48,342 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
+2015-10-11 23:52:48,342 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
 2015-10-11 23:52:48,343 ERROR SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 59 - Exception {} 
 redis.clients.jedis.exceptions.JedisConnectionException: JedisPubSub was not subscribed to a Jedis instance.
 	at redis.clients.jedis.JedisPubSub.unsubscribe(JedisPubSub.java:41)
@@ -214,6 +214,1336 @@ redis.clients.jedis.exceptions.JedisConnectionException: JedisPubSub was not sub
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
 2015-10-11 23:53:46,588 INFO  App:App main 19 - welcome 
-2015-10-11 23:53:46,756 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-11 23:53:46,756 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 133 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]}
 2015-10-11 23:53:46,756 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 39 - Subscribing to channel cluster_updates 
-2015-10-11 23:53:46,757 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesDemon$1 run 168 - bulk doc is 
+2015-10-11 23:53:46,757 INFO  RedisPubSub:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 168 - bulk doc is
+2015-10-12 00:41:20,460 INFO  App:App main 19 - welcome 
+2015-10-12 00:41:20,631 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:41:20,632 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 46 - Subscribing to channel cluster_updates 
+2015-10-12 00:41:20,633 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:42:24,075 INFO  App:App main 19 - welcome 
+2015-10-12 00:42:24,240 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:42:24,241 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 46 - Subscribing to channel cluster_updates 
+2015-10-12 00:42:24,242 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:42:25,245 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:42:25,245 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:42:26,243 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:42:26,243 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:42:27,245 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:42:27,245 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:42:28,243 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:42:28,243 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:42:29,245 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:42:29,245 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:42:30,244 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:42:30,245 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:42:31,244 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:42:31,245 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:42:32,244 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:42:32,244 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:42:33,242 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:42:33,243 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:42:40,451 INFO  App:App main 19 - welcome 
+2015-10-12 00:42:40,621 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:42:40,622 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 46 - Subscribing to channel cluster_updates 
+2015-10-12 00:42:40,623 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:42:50,624 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:42:50,624 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:43:00,621 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:43:00,621 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:43:10,623 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:43:10,623 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:43:20,624 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:43:20,625 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:43:30,625 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:43:30,626 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:43:40,625 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:43:40,625 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:43:50,624 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:43:50,624 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:43:59,930 ERROR ClustersSubscriber:com.olastore.listing.consumers.definitions.ClustersSubscriber onMessage 65 - Exception {} 
+java.lang.NullPointerException
+	at com.olastore.listing.consumers.definitions.ClustersSubscriber.onMessage(ClustersSubscriber.java:54)
+	at redis.clients.jedis.JedisPubSub.process(JedisPubSub.java:129)
+	at redis.clients.jedis.JedisPubSub.proceed(JedisPubSub.java:102)
+	at redis.clients.jedis.Jedis.subscribe(Jedis.java:2591)
+	at com.olastore.listing.consumers.scheduler.SubscriberLauncher$1.run(SubscriberLauncher.java:52)
+	at java.lang.Thread.run(Thread.java:745)
+2015-10-12 00:44:00,624 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:44:00,624 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:44:10,625 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:44:10,626 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:45:46,783 INFO  App:App main 19 - welcome 
+2015-10-12 00:45:47,069 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:45:47,069 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:45:47,070 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 46 - Subscribing to channel cluster_updates 
+2015-10-12 00:46:06,273 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:46:06,324 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:48:38,727 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:49:39,441 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:49:39,441 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:49:39,441 ERROR ClustersSubscriber:com.olastore.listing.consumers.definitions.ClustersSubscriber onMessage 65 - Exception {} 
+java.lang.NullPointerException
+	at com.olastore.listing.consumers.definitions.ClustersSubscriber.onMessage(ClustersSubscriber.java:54)
+	at redis.clients.jedis.JedisPubSub.process(JedisPubSub.java:129)
+	at redis.clients.jedis.JedisPubSub.proceed(JedisPubSub.java:102)
+	at redis.clients.jedis.Jedis.subscribe(Jedis.java:2591)
+	at com.olastore.listing.consumers.scheduler.SubscriberLauncher$1.run(SubscriberLauncher.java:52)
+	at java.lang.Thread.run(Thread.java:745)
+2015-10-12 00:49:39,442 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:49:39,443 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:49:39,444 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:49:39,444 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:49:39,444 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:49:39,444 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:49:39,446 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:49:39,446 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:49:39,447 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:49:39,447 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:49:39,447 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:49:39,447 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:49:39,447 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:49:39,448 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:49:39,448 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:49:39,448 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:49:39,448 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:49:39,448 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:49:39,449 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:49:39,449 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:49:39,449 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:49:39,449 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:49:39,449 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:49:39,449 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:49:39,450 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:49:39,450 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:49:39,450 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:49:39,450 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:49:39,450 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:49:39,450 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:49:39,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:49:39,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:49:39,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:49:39,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:49:39,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:49:39,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:49:39,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:49:39,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:49:39,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:49:39,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 106 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:49:39,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 141 - bulk doc is 
+2015-10-12 00:50:00,632 INFO  App:App main 19 - welcome 
+2015-10-12 00:50:00,851 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:50:00,851 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 00:50:00,852 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 46 - Subscribing to channel cluster_updates 
+2015-10-12 00:50:10,853 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:50:10,854 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 00:50:33,940 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:50:40,000 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 00:50:40,000 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:50:40,000 ERROR ClustersSubscriber:com.olastore.listing.consumers.definitions.ClustersSubscriber onMessage 65 - Exception {} 
+java.lang.NullPointerException
+	at com.olastore.listing.consumers.definitions.ClustersSubscriber.onMessage(ClustersSubscriber.java:54)
+	at redis.clients.jedis.JedisPubSub.process(JedisPubSub.java:129)
+	at redis.clients.jedis.JedisPubSub.proceed(JedisPubSub.java:102)
+	at redis.clients.jedis.Jedis.subscribe(Jedis.java:2591)
+	at com.olastore.listing.consumers.scheduler.SubscriberLauncher$1.run(SubscriberLauncher.java:52)
+	at java.lang.Thread.run(Thread.java:745)
+2015-10-12 00:50:40,001 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 00:53:04,189 INFO  App:App main 19 - welcome 
+2015-10-12 00:53:04,406 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 00:53:04,407 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 00:53:04,408 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 46 - Subscribing to channel cluster_updates 
+2015-10-12 00:53:15,785 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,382 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,384 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,385 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,385 ERROR ClustersSubscriber:com.olastore.listing.consumers.definitions.ClustersSubscriber onMessage 64 - Exception {} 
+java.lang.NullPointerException
+	at com.olastore.listing.consumers.definitions.ClustersSubscriber.onMessage(ClustersSubscriber.java:53)
+	at redis.clients.jedis.JedisPubSub.process(JedisPubSub.java:129)
+	at redis.clients.jedis.JedisPubSub.proceed(JedisPubSub.java:102)
+	at redis.clients.jedis.Jedis.subscribe(Jedis.java:2591)
+	at com.olastore.listing.consumers.scheduler.SubscriberLauncher$1.run(SubscriberLauncher.java:52)
+	at java.lang.Thread.run(Thread.java:745)
+2015-10-12 01:17:38,385 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,391 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,391 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,392 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,393 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,394 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,394 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,401 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,402 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,403 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,404 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,404 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,405 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,406 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,407 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,407 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,408 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,409 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,409 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,410 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,411 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,412 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,412 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,413 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,414 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,414 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,415 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,416 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,416 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,417 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,418 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,419 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,419 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,420 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,421 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,422 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,422 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,423 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,424 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,425 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,426 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,426 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,427 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,428 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,429 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,430 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,430 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,431 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,432 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,433 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,433 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,434 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,435 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,436 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,436 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,437 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,438 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,439 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,439 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,440 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,441 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,442 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,442 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,458 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,460 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,461 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,461 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,462 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,463 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,464 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,464 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,465 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,466 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,467 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,468 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,468 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,469 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,470 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,471 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,472 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,472 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,473 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,477 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,478 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,479 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,481 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,481 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,482 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,482 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,483 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,484 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,484 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,485 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,486 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,486 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,487 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,488 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,489 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,489 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,490 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,491 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,491 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,492 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,493 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,493 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,494 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,495 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,495 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 01:17:38,496 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 107 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 01:17:38,497 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 142 - bulk doc is 
+2015-10-12 03:09:49,080 INFO  App:App main 19 - welcome 
+2015-10-12 03:09:49,299 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:09:49,300 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:09:49,300 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 46 - Subscribing to channel cluster_updates 
+2015-10-12 03:10:09,464 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:10:09,507 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:10:48,992 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:10:48,993 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:10:48,993 ERROR ClustersSubscriber:com.olastore.listing.consumers.definitions.ClustersSubscriber onMessage 64 - Exception {} 
+java.lang.NullPointerException
+	at com.olastore.listing.consumers.definitions.ClustersSubscriber.onMessage(ClustersSubscriber.java:53)
+	at redis.clients.jedis.JedisPubSub.process(JedisPubSub.java:129)
+	at redis.clients.jedis.JedisPubSub.proceed(JedisPubSub.java:102)
+	at redis.clients.jedis.Jedis.subscribe(Jedis.java:2591)
+	at com.olastore.listing.consumers.scheduler.SubscriberLauncher$1.run(SubscriberLauncher.java:52)
+	at java.lang.Thread.run(Thread.java:745)
+2015-10-12 03:10:48,993 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:10:48,995 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:10:48,995 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:10:48,995 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:10:48,995 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:10:48,996 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:10:50,606 INFO  App:App main 19 - welcome 
+2015-10-12 03:10:50,807 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:10:50,807 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:10:50,808 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 46 - Subscribing to channel cluster_updates 
+2015-10-12 03:11:01,251 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:11:09,854 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler getClustersWithStoreId 35 - Store id is 100020 
+2015-10-12 03:11:09,855 ERROR UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler getClustersWithStoreId 46 - Exception {} 
+java.lang.NullPointerException
+	at com.olastore.listing.consumers.scheduler.UpdatesHandler.getClustersWithStoreId(UpdatesHandler.java:37)
+	at com.olastore.listing.consumers.scheduler.UpdatesHandler$1.run(UpdatesHandler.java:127)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2015-10-12 03:11:09,857 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:11:10,808 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:11:10,809 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:11:20,810 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:11:20,810 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:11:30,808 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:11:30,808 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:11:40,810 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:11:40,810 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:11:49,726 INFO  App:App main 19 - welcome 
+2015-10-12 03:11:49,962 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:11:49,962 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:11:49,962 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 46 - Subscribing to channel cluster_updates 
+2015-10-12 03:11:50,810 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:11:50,810 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:12:03,145 INFO  App:App main 19 - welcome 
+2015-10-12 03:12:03,376 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:12:03,376 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:12:03,377 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 46 - Subscribing to channel cluster_updates 
+2015-10-12 03:12:13,378 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[100020], offline=[], active=[]} 
+2015-10-12 03:12:13,378 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler getClustersWithStoreId 35 - Store id is 100020 
+2015-10-12 03:12:47,903 ERROR UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler getClustersWithStoreId 46 - Exception {} 
+java.lang.NullPointerException
+	at com.olastore.listing.consumers.scheduler.UpdatesHandler.getClustersWithStoreId(UpdatesHandler.java:37)
+	at com.olastore.listing.consumers.scheduler.UpdatesHandler$1.run(UpdatesHandler.java:127)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2015-10-12 03:12:47,905 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:12:47,905 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:12:47,906 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:12:47,906 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:12:47,906 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:12:47,906 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:12:47,906 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:12:49,535 INFO  App:App main 19 - welcome 
+2015-10-12 03:12:49,896 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:12:49,896 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:12:49,897 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 47 - Subscribing to channel cluster_updates 
+2015-10-12 03:13:00,600 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[100020], offline=[], active=[]} 
+2015-10-12 03:13:00,601 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler getClustersWithStoreId 35 - Store id is 100020 
+2015-10-12 03:13:39,573 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:13:39,573 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:13:39,573 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:13:39,574 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:13:39,574 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:13:39,574 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:13:39,574 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:13:39,900 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:13:39,900 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:14:44,279 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:14:48,659 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler getClustersWithStoreId 35 - Store id is 100105 
+2015-10-12 03:34:30,906 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler getClustersWithStoreId 35 - Store id is 100020 
+2015-10-12 03:34:30,910 ERROR UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler getClustersWithStoreId 46 - Exception {} 
+java.lang.NullPointerException
+	at com.olastore.listing.consumers.scheduler.UpdatesHandler.getClustersWithStoreId(UpdatesHandler.java:38)
+	at com.olastore.listing.consumers.scheduler.UpdatesHandler$1.run(UpdatesHandler.java:127)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2015-10-12 03:34:30,911 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,912 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,912 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,912 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,912 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,912 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,913 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,913 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,913 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,913 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,913 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,913 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,914 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,914 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,914 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,914 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,914 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,915 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,915 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,915 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,915 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,915 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,915 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,916 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,916 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,916 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,916 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,916 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,917 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,917 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,917 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,917 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,917 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,917 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,918 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,918 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,918 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,918 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,918 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,918 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,919 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,919 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,919 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,919 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,919 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,919 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,920 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,920 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,920 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,920 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,920 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,920 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,921 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,921 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,921 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,921 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,921 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,922 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,922 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,922 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,922 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,922 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,922 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,923 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,923 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,923 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,923 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,923 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,923 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,924 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,924 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,924 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,924 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,924 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:30,925 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:30,925 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:32,636 INFO  App:App main 19 - welcome 
+2015-10-12 03:34:33,102 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:33,103 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:33,104 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 47 - Subscribing to channel cluster_updates 
+2015-10-12 03:34:43,104 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:43,105 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:34:53,103 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:34:53,103 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:35:03,102 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:35:03,102 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 03:35:13,177 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 03:35:13,835 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler getClustersWithStoreId 35 - Store id is 100023 
+2015-10-12 04:03:58,783 ERROR UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler getClustersWithStoreId 46 - Exception {} 
+java.lang.NullPointerException
+	at com.olastore.listing.consumers.scheduler.UpdatesHandler.getClustersWithStoreId(UpdatesHandler.java:38)
+	at com.olastore.listing.consumers.scheduler.UpdatesHandler$1.run(UpdatesHandler.java:127)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2015-10-12 04:03:58,785 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,785 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,785 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,787 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,787 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,787 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,787 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,787 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,788 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,788 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,788 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,788 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,788 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,788 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,789 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,789 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,789 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,789 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,789 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,789 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,790 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,790 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,790 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,790 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,790 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,790 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,791 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,791 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,791 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,791 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,791 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,791 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,792 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,792 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,792 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,792 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,792 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,792 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,793 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,793 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,793 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,793 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,793 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,793 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,794 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,794 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,794 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,794 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,794 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,795 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,795 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,795 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,795 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,795 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,795 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,796 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,796 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,796 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,796 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,796 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,796 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,797 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,797 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,797 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,797 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,797 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,797 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,798 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,798 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,798 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,798 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,798 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,799 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,799 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,799 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,799 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,799 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,799 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:03:58,800 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 135 - bulk doc is 
+2015-10-12 04:03:58,800 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 100 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:04:01,130 INFO  App:App main 19 - welcome 
+2015-10-12 04:04:01,542 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:04:01,542 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:04:01,543 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 47 - Subscribing to channel cluster_updates 
+2015-10-12 04:04:07,023 INFO  App:App main 19 - welcome 
+2015-10-12 04:04:07,449 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:04:07,450 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:04:07,450 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 47 - Subscribing to channel cluster_updates 
+2015-10-12 04:04:17,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:04:17,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:04:27,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:04:27,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:04:39,120 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:04:40,850 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:04:50,015 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[com.olastore.listing.consumers.lib.EventMessage@46d71aa7], offline=[], active=[]} 
+2015-10-12 04:04:50,015 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler getClustersWithStoreId 36 - Store id is 100023 
+2015-10-12 04:05:59,775 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is{"update": {"_id" : "100023","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.3655624036979969"}}
+{"update": {"_id" : "100020-100023","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.4503081664098613"}}
+{"update": {"_id" : "100023-100089","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5292758089368259"}}
+{"update": {"_id" : "100023-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6540832049306625"}}
+{"update": {"_id" : "100023-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.50115562403698"}}
+{"update": {"_id" : "100023-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5019260400616333"}}
+{"update": {"_id" : "100023-100044","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.49229583975346686"}}
+{"update": {"_id" : "100023-100049","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5104006163328197"}}
+{"update": {"_id" : "100023-100035","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.4503081664098613"}}
+{"update": {"_id" : "100023-100084","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5770416024653313"}}
+{"update": {"_id" : "100023-100106","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.45878274268104774"}}
+{"update": {"_id" : "100023-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5211864406779662"}}
+{"update": {"_id" : "100023-100042","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5034668721109399"}}
+{"update": {"_id" : "100018-100023","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5600924499229584"}}
+{"update": {"_id" : "100023-100073","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.48805855161787365"}}
+{"update": {"_id" : "100016-100023","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6086286594761171"}}
+{"update": {"_id" : "100023-100045","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5019260400616333"}}
+{"update": {"_id" : "100017-100023","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.49499229583975346"}}
+{"update": {"_id" : "100023-100100","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5069337442218799"}}
+{"update": {"_id" : "100023-100083","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.49614791987673346"}}
+{"update": {"_id" : "100023-100210","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5365947611710323"}}
+{"update": {"_id" : "100023-100275","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6117103235747303"}}
+{"update": {"_id" : "100003-100023","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.3659476117103236"}}
+{"update": {"_id" : "100023-100077","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5138674884437596"}}
+{"update": {"_id" : "100023-100261","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.4776579352850539"}}
+{"update": {"_id" : "100023-100109","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5331278890600925"}}
+{"update": {"_id" : "100023-100280","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.4306625577812018"}}
+{"update": {"_id" : "100023-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.687211093990755"}}
+{"update": {"_id" : "100020-100023-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5450693374422187"}}
+{"update": {"_id" : "100023-100088-100089","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.588597842835131"}}
+{"update": {"_id" : "100020-100023-100088-100089","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6101694915254238"}}
+{"update": {"_id" : "100023-100044-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5211864406779662"}}
+{"update": {"_id" : "100023-100024-100089","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6949152542372882"}}
+{"update": {"_id" : "100023-100084-100089","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6113251155624037"}}
+{"update": {"_id" : "100020-100023-100044","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5624036979969184"}}
+{"update": {"_id" : "100020-100023-100044-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6375192604006163"}}
+{"update": {"_id" : "100023-100035-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5450693374422187"}}
+{"update": {"_id" : "100023-100073-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.562788906009245"}}
+{"update": {"_id" : "100020-100023-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.7041602465331279"}}
+{"update": {"_id" : "100020-100023-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5685670261941448"}}
+{"update": {"_id" : "100020-100023-100044-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5843605546995377"}}
+{"update": {"_id" : "100020-100023-100063-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6386748844375963"}}
+{"update": {"_id" : "100017-100018-100023","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6040061633281972"}}
+{"update": {"_id" : "100023-100073-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5481510015408321"}}
+{"update": {"_id" : "100018-100023-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6302003081664098"}}
+{"update": {"_id" : "100018-100023-100073-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6452234206471494"}}
+{"update": {"_id" : "100023-100024-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6941448382126348"}}
+{"update": {"_id" : "100020-100023-100049","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5747303543913713"}}
+{"update": {"_id" : "100003-100023-100044","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.4926810477657935"}}
+{"update": {"_id" : "100017-100023-100083","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5585516178736518"}}
+{"update": {"_id" : "100023-100042-100045","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5208012326656395"}}
+{"update": {"_id" : "100020-100023-100045","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5677966101694916"}}
+{"update": {"_id" : "100016-100017-100023","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6336671802773498"}}
+{"update": {"_id" : "100018-100023-100073","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.612095531587057"}}
+{"update": {"_id" : "100016-100023-100073","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6425269645608629"}}
+{"update": {"_id" : "100017-100023-100210","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5855161787365177"}}
+{"update": {"_id" : "100020-100023-100035-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5728043143297381"}}
+{"update": {"_id" : "100023-100042-100044-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5273497688751926"}}
+{"update": {"_id" : "100023-100042-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5211864406779662"}}
+{"update": {"_id" : "100017-100023-100275","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6313559322033898"}}
+{"update": {"_id" : "100023-100073-100077","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5766563944530047"}}
+{"update": {"_id" : "100023-100073-100210","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5905238828967643"}}
+{"update": {"_id" : "100023-100073-100275","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.651386748844376"}}
+{"update": {"_id" : "100017-100018-100023-100073","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6402157164869029"}}
+{"update": {"_id" : "100017-100023-100073","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5681818181818182"}}
+{"update": {"_id" : "100023-100077-100109","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5766563944530047"}}
+{"update": {"_id" : "100016-100023-100109","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6340523882896765"}}
+{"update": {"_id" : "100023-100035-100073","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5450693374422187"}}
+{"update": {"_id" : "100023-100049-100106","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.5832049306625577"}}
+ 
+2015-10-12 04:05:59,798 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:05:59,799 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:05:59,799 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:05:59,800 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:05:59,801 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:05:59,801 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:05:59,801 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:05:59,801 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:05:59,801 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:05:59,801 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:05:59,802 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:05:59,802 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:05:59,802 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:05:59,802 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:06:07,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:06:07,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:06:17,449 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:06:17,449 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:06:27,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:06:27,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:06:37,448 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:06:37,449 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:06:47,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:06:47,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:06:57,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:06:57,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:07:07,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:07:07,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:07:17,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:07:17,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:07:27,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:07:27,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:07:37,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:07:37,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:07:47,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:07:47,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:07:57,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:07:57,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:08:07,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:08:07,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:08:17,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:08:17,454 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:08:27,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:08:27,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:08:37,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:08:37,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:08:47,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:08:47,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:08:57,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:08:57,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:09:07,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:09:07,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:09:17,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[com.olastore.listing.consumers.lib.EventMessage@7050c91f], offline=[], active=[]} 
+2015-10-12 04:09:17,454 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler getClustersWithStoreId 36 - Store id is 100024 
+2015-10-12 04:09:19,495 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is{"update": {"_id" : "100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.599768875192604"}}
+{"update": {"_id" : "100024-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6587057010785824"}}
+{"update": {"_id" : "100020-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6402157164869029"}}
+{"update": {"_id" : "100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6563944530046225"}}
+{"update": {"_id" : "100024-100089","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.662557781201849"}}
+{"update": {"_id" : "100024-100049","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6667950693374423"}}
+{"update": {"_id" : "100018-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6783513097072419"}}
+{"update": {"_id" : "100024-100073","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.651386748844376"}}
+{"update": {"_id" : "100017-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6475346687211094"}}
+{"update": {"_id" : "100024-100044","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6617873651771957"}}
+{"update": {"_id" : "100016-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.7045454545454546"}}
+{"update": {"_id" : "100024-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6598613251155624"}}
+{"update": {"_id" : "100024-100035","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6386748844375963"}}
+{"update": {"_id" : "100023-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6540832049306625"}}
+{"update": {"_id" : "100020-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6822033898305084"}}
+{"update": {"_id" : "100024-100079-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6953004622496148"}}
+{"update": {"_id" : "100020-100024-100044","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6956856702619415"}}
+{"update": {"_id" : "100020-100024-100044-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.7295839753466872"}}
+{"update": {"_id" : "100020-100024-100073-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.7095531587057011"}}
+{"update": {"_id" : "100020-100024-100049-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.7345916795069337"}}
+{"update": {"_id" : "100020-100024-100049","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.699537750385208"}}
+{"update": {"_id" : "100024-100073-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6887519260400616"}}
+{"update": {"_id" : "100024-100073-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.672573189522342"}}
+{"update": {"_id" : "100020-100024-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6926040061633282"}}
+{"update": {"_id" : "100024-100044-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6718027734976888"}}
+{"update": {"_id" : "100020-100024-100044-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.7030046224961479"}}
+{"update": {"_id" : "100024-100035-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6783513097072419"}}
+{"update": {"_id" : "100023-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.687211093990755"}}
+{"update": {"_id" : "100023-100024-100089","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6949152542372882"}}
+{"update": {"_id" : "100020-100023-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.7041602465331279"}}
+{"update": {"_id" : "100023-100024-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"rank":"0.6941448382126348"}}
+ 
+2015-10-12 04:09:27,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:09:27,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:09:37,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:09:37,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:09:47,450 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:09:47,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:09:57,450 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:09:57,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:10:07,450 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:10:07,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:10:17,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:10:17,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:10:27,450 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:10:27,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:10:37,450 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:10:37,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:10:47,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:10:47,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:10:57,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:10:57,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:11:07,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:11:07,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:12:19,036 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:12:19,036 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:12:19,037 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:12:19,037 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:12:19,037 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:12:19,037 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:12:19,037 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:12:19,038 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:12:19,038 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:12:19,038 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:12:19,038 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:12:19,038 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:12:19,038 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:12:19,039 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:12:27,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:12:27,454 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:12:37,450 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:12:37,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:12:47,449 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:12:47,449 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:12:59,779 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:12:59,779 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:13:07,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:13:07,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:13:17,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:13:17,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:13:26,432 ERROR ClustersSubscriber:com.olastore.listing.consumers.definitions.ClustersSubscriber onMessage 71 - Exception {} 
+org.json.JSONException: JSONObject["state"] not found.
+	at org.json.JSONObject.get(JSONObject.java:473)
+	at org.json.JSONObject.getString(JSONObject.java:654)
+	at com.olastore.listing.consumers.definitions.ClustersSubscriber.onMessage(ClustersSubscriber.java:63)
+	at redis.clients.jedis.JedisPubSub.process(JedisPubSub.java:129)
+	at redis.clients.jedis.JedisPubSub.proceed(JedisPubSub.java:102)
+	at redis.clients.jedis.Jedis.subscribe(Jedis.java:2591)
+	at com.olastore.listing.consumers.scheduler.SubscriberLauncher$1.run(SubscriberLauncher.java:53)
+	at java.lang.Thread.run(Thread.java:745)
+2015-10-12 04:13:27,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:13:27,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:13:37,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:13:37,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:13:47,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[com.olastore.listing.consumers.lib.EventMessage@7b6ff8e7]} 
+2015-10-12 04:13:47,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler getClustersWithStoreId 36 - Store id is 100024 
+2015-10-12 04:13:49,670 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is{"update": {"_id" : "100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100024-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100020-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100024-100089","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100024-100049","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100018-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100024-100073","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100017-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100024-100044","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100016-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100024-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100024-100035","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100023-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100020-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100024-100079-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100020-100024-100044","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100020-100024-100044-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100020-100024-100073-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100020-100024-100049-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100020-100024-100049","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100024-100073-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100024-100073-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100020-100024-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100024-100044-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100020-100024-100044-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100024-100035-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100023-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100023-100024-100089","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100020-100023-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+{"update": {"_id" : "100023-100024-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"active"}}
+ 
+2015-10-12 04:13:57,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:13:57,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:14:07,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:14:07,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:14:17,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[com.olastore.listing.consumers.lib.EventMessage@5e8313c5], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:14:17,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler getClustersWithStoreId 36 - Store id is 100024 
+2015-10-12 04:14:18,856 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is{"update": {"_id" : "100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100024-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100020-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100024-100089","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100024-100049","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100018-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100024-100073","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100017-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100024-100044","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100016-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100024-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100024-100035","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100023-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100020-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100024-100079-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100020-100024-100044","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100020-100024-100044-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100020-100024-100073-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100020-100024-100049-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100020-100024-100049","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100024-100073-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100024-100073-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100020-100024-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100024-100044-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100020-100024-100044-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100024-100035-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100023-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100023-100024-100089","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100020-100023-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+{"update": {"_id" : "100023-100024-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"state":"inactive"}}
+ 
+2015-10-12 04:14:27,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:14:27,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:14:37,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:14:37,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:14:47,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:14:47,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:14:57,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:14:57,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:15:07,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:15:07,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:15:17,450 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:15:17,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:15:27,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:15:27,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:15:37,449 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:15:37,450 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:15:47,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:15:47,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:15:57,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:15:57,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:16:07,146 INFO  App:App main 19 - welcome 
+2015-10-12 04:16:07,449 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:16:07,449 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:16:07,479 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:16:07,480 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:16:07,480 INFO  SubscriberLauncher:com.olastore.listing.consumers.scheduler.SubscriberLauncher startListening 47 - Subscribing to channel cluster_updates 
+2015-10-12 04:16:17,449 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:16:17,449 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:16:17,479 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:16:17,480 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:16:27,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[com.olastore.listing.consumers.lib.EventMessage@6906a6f1], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:16:27,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler getClustersWithStoreId 36 - Store id is 100024 
+2015-10-12 04:16:27,479 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[com.olastore.listing.consumers.lib.EventMessage@6b5ebde6], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:16:27,480 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler getClustersWithStoreId 36 - Store id is 100024 
+2015-10-12 04:16:27,580 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is{"update": {"_id" : "100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100020-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100089","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100049","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100018-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100073","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100017-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100044","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100016-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100035","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100023-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100020-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100079-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100020-100024-100044","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100020-100024-100044-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100020-100024-100073-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100020-100024-100049-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100020-100024-100049","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100073-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100073-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100020-100024-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100044-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100020-100024-100044-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100035-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100023-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100023-100024-100089","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100020-100023-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100023-100024-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+ 
+2015-10-12 04:16:29,011 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is{"update": {"_id" : "100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100020-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100089","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100049","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100018-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100073","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100017-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100044","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100016-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100035","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100023-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100020-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100079-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100020-100024-100044","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100020-100024-100044-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100020-100024-100073-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100020-100024-100049-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100020-100024-100049","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100073-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100073-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100020-100024-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100044-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100020-100024-100044-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100024-100035-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100023-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100023-100024-100089","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100020-100023-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+{"update": {"_id" : "100023-100024-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"inactive"}}
+ 
+2015-10-12 04:16:37,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:16:37,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:16:37,482 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:16:37,482 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:16:47,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:16:47,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:16:47,482 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:16:47,482 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:16:57,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[com.olastore.listing.consumers.lib.EventMessage@74d89d8c]} 
+2015-10-12 04:16:57,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler getClustersWithStoreId 36 - Store id is 100024 
+2015-10-12 04:16:57,482 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[com.olastore.listing.consumers.lib.EventMessage@679e96f7]} 
+2015-10-12 04:16:57,482 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler getClustersWithStoreId 36 - Store id is 100024 
+2015-10-12 04:16:57,489 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is{"update": {"_id" : "100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100020-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100089","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100049","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100018-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100073","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100017-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100044","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100016-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100035","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100023-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100020-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100079-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100020-100024-100044","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100020-100024-100044-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100020-100024-100073-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100020-100024-100049-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100020-100024-100049","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100073-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100073-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100020-100024-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100044-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100020-100024-100044-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100035-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100023-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100023-100024-100089","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100020-100023-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100023-100024-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+ 
+2015-10-12 04:17:00,598 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is{"update": {"_id" : "100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100020-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100089","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100049","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100018-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100073","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100017-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100044","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100016-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100035","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100023-100024","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100020-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100079-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100020-100024-100044","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100020-100024-100044-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100020-100024-100073-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100020-100024-100049-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100020-100024-100049","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100073-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100073-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100020-100024-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100044-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100020-100024-100044-100063","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100024-100035-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100023-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100023-100024-100089","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100020-100023-100024-100088","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+{"update": {"_id" : "100023-100024-100079","_type" : "cluster", "_index" : "geo_clusters_ban"}}
+{"doc": {"status":"active"}}
+ 
+2015-10-12 04:17:07,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:17:07,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:17:07,481 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:17:07,481 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:17:17,451 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:17:17,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:17:17,481 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:17:17,481 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:17:27,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:17:27,452 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:17:27,481 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:17:27,481 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:17:37,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:17:37,453 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:17:37,479 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:17:37,479 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:17:47,449 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:17:47,450 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 
+2015-10-12 04:17:47,483 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 101 - Copy map is {inactive=[], online=[], productChange=[], offline=[], active=[]} 
+2015-10-12 04:17:47,483 INFO  UpdatesHandler:com.olastore.listing.consumers.scheduler.UpdatesHandler$1 run 136 - bulk doc is 

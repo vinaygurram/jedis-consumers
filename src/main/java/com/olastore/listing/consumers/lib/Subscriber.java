@@ -1,5 +1,7 @@
 package com.olastore.listing.consumers.lib;
 
+import redis.clients.jedis.JedisPubSub;
+
 import java.util.List;
 import java.util.concurrent.Callable;
 

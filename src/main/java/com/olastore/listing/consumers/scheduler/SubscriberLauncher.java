@@ -29,6 +29,7 @@ public class SubscriberLauncher {
     this.popularProductsSet = popularProductsSet;
     this.city = city;
     this.env = env;
+    initializeESClient();
   }
 
   public void initializeESClient(){
@@ -40,6 +41,7 @@ public class SubscriberLauncher {
     try {
       RedisClient redisClient = new RedisClient((String)redisConfigReader.readValue("redis_host_"+env),(Integer)redisConfigReader.readValue("redis_port_"+env));
       final Jedis subscriberResource = redisClient.getResource();
+
       final ClustersSubscriber clustersSubscriber = new ClustersSubscriber();
       final String channel_name = (String)redisConfigReader.readValue("redis_channel_name");
       logger.info("Subscribing to channel {}",channel_name);

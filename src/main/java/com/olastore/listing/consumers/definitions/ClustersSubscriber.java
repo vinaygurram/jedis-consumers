@@ -1,5 +1,6 @@
 package com.olastore.listing.consumers.definitions;
 
+import com.olastore.listing.consumers.lib.EventMessage;
 import com.olastore.listing.consumers.lib.Subscriber;
 import com.olastore.listing.consumers.lib.SubscriberCategory;
 import com.olastore.listing.consumers.lib.Event;
@@ -7,7 +8,7 @@ import com.olastore.listing.consumers.scheduler.SubscriberLauncher;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.olastore.listing.consumers.scheduler.UpdatesDemon;
+import com.olastore.listing.consumers.scheduler.UpdatesHandler;
 import redis.clients.jedis.JedisPubSub;
 
 import java.util.ArrayList;
@@ -18,12 +19,11 @@ import java.util.List;
  */
 public class ClustersSubscriber extends JedisPubSub implements Subscriber {
 
-  UpdatesDemon updatesDemon;
+  UpdatesHandler updatesHandler = new UpdatesHandler();
   public static Logger logger = LoggerFactory.getLogger(ClustersSubscriber.class);
 
   public ClustersSubscriber (){
-    updatesDemon = new UpdatesDemon();
-    updatesDemon.runDemon();
+    updatesHandler.runDemon();
   }
 
   @Override
@@ -51,13 +51,19 @@ public class ClustersSubscriber extends JedisPubSub implements Subscriber {
         System.out.println(messageObject);
         if(messageObject.has("message")){
           //this event is an inverntory event
-          updatesDemon.updatedStores.get("product_change").add(messageObject.getString("store_id"));
+          EventMessage eventMessage = new EventMessage();
+          eventMessage.setCityCode(messageObject.getString("city_code"));
+          eventMessage.setStoreId(messageObject.getString("store_id"));
+          updatesHandler.updatedStores.get("productChange").add(eventMessage);
         }else if(messageObject.has("collection_type")){
           //store update event
+          EventMessage eventMessage = new EventMessage();
+          eventMessage.setCityCode(messageObject.getString("city_code"));
+          eventMessage.setStoreId(messageObject.getString("store_id"));
           if(messageObject.getString("state").contentEquals("active")){
-            updatesDemon.updatedStores.get("active").add(messageObject.getString("store_id"));
+            updatesHandler.updatedStores.get("active").add(eventMessage);
           }else if(messageObject.getString("state").contentEquals("inactive")){
-            updatesDemon.updatedStores.get("inactive").add(messageObject.getString("store_id"));
+            updatesHandler.updatedStores.get("inactive").add(eventMessage);
           }
         }
       }
