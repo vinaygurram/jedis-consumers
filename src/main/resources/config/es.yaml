@@ -1,0 +1,18 @@
+#Elastic Search Configurations
+
+#hosts
+es_host_dev: localhost:9200
+es_host_staging: es.olahack.in
+es_host_qa: es.qa.olahack.in
+es_host_prod: escluster.internal.olastore.com:9200
+
+#indices and types
+geo_hash_index_name: geo_hashes
+geo_hash_index_type: hash
+clusters_index_name: geo_clusters
+clusters_index_type: cluster
+listing_index_name: listing
+listing_index_type: list
+stores_index_name: stores_common
+stores_index_type: store
+
