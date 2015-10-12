@@ -144,6 +144,6 @@ public class UpdatesHandler {
           logger.error("Exception {}",e);
         }
       }
-    },0,10, TimeUnit.SECONDS);
+    },0,10, TimeUnit.MINUTES);
   }
 }
