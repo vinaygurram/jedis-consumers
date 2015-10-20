@@ -1,5 +1,7 @@
 package com.olastore.listing.consumers.scheduler;
 
+import com.olastore.listing.consumers.definitions.Cluster;
+import com.olastore.listing.consumers.definitions.Store;
 import com.olastore.listing.consumers.lib.EventMessage;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -29,35 +31,53 @@ public class UpdatesHandler {
     map.put("productChange",new HashSet<EventMessage>());
   }
 
-  public List<String> getClustersWithStoreId(String storeId,String city_code){
+  public ConcurrentHashMap<String,Cluster> getClustersWithStores(ConcurrentHashMap<String,Store> stores){
 
-    List<String> clusterIdList = new ArrayList<String>();
+    ConcurrentHashMap<String,Cluster> clusters = new ConcurrentHashMap<>();
     try {
-      logger.info("Store id is "+ storeId);
-      String query = "{\"size\" : 1000,\"_source\":\"false\",\"query\":{\"term\":{\"stores.store_id\":\""+storeId+"\"}}}";
-      JSONObject result = SubscriberLauncher.esClient.searchES((String)SubscriberLauncher.esConfigReader.readValue("clusters_index_name")+"_"+city_code,(String)SubscriberLauncher.esConfigReader.readValue("clusters_index_type"),query);
+
+      StringBuilder storeIdString = new StringBuilder();
+      for(String storeId: stores.keySet()){
+        storeIdString.append(',');
+        storeIdString.append("\""+storeId+"\"");
+      }
+      logger.info("Store ids is "+ storeIdString);
+      String query = "{\"size\" : 3000,\"query\":{\"terms\":{\"stores.store_id\":["+storeIdString.toString().substring(1)+"]}}}";
+      JSONObject result = SubscriberLauncher.esClient.searchES((String)SubscriberLauncher.esConfigReader.readValue("clusters_index_name"),(String)SubscriberLauncher.esConfigReader.readValue("clusters_index_type"),query);
       result = result.getJSONObject("hits");
       JSONArray hitsArray = result.getJSONArray("hits");
       for(int i=0;i<hitsArray.length();i++){
-        JSONObject thisObject = hitsArray.getJSONObject(i);
-        String clusterId = thisObject.getString("_id");
-        clusterIdList.add(clusterId);
+        JSONObject thisStoreObject = hitsArray.getJSONObject(i);
+        String id = thisStoreObject.getString("_id");
+        Cluster cluster = new Cluster();
+        cluster.setId(id);
+
+        JSONArray activeStores = thisStoreObject.getJSONObject("_source").getJSONArray("stores");
+        Set<String> newActiveStores = new HashSet<>();
+        for(int j=0;j<activeStores.length();j++){
+          String activeStoreId = activeStores.getString(j);
+          if(stores.containsKey(activeStoreId)){
+            cluster.setCity_code(stores.get(activeStoreId).getCityCode());
+            if(stores.get(activeStoreId).isActive()) newActiveStores.add(activeStoreId);
+          }else {
+            newActiveStores.add(activeStoreId);
+          }
+        }
+        cluster.setActiveStores(newActiveStores);
+        clusters.put(id,cluster);
       }
     }catch (Exception e){
       logger.error("Exception {}",e);
     }
-    return clusterIdList;
+    return clusters;
   }
 
 
-  public HashMap<String,Double> getCoverageOfCluster(String clusterId,String city_code){
-
-    HashMap<String,Double> coverageMap = new HashMap<String, Double>();
-    coverageMap.put("rank",0d);
+  public void updateRankOfCluster(Cluster cluster){
 
     try {
       Set<String> productsSet = new HashSet<>();
-      String[] stores  = clusterId.split("-");
+      Set<String> stores  =  cluster.getActiveStores();
       String storeIdString = "";
       for(String s: stores){
         storeIdString += "\""+s+"\",";
@@ -69,7 +89,7 @@ public class UpdatesHandler {
           "{\"term\":{\"product_details.available\":true}}," +
           "{\"term\":{\"product_details.status\":\"current\"}}]}}}}," +
           "\"aggregations\":{\"unique_products\":{\"terms\":{\"field\":\"product_details.id\",\"size\":0}}}}}}";
-      JSONObject result = SubscriberLauncher.esClient.searchES((String) SubscriberLauncher.esConfigReader.readValue("listing_index_name")+"_"+city_code,
+      JSONObject result = SubscriberLauncher.esClient.searchES((String) SubscriberLauncher.esConfigReader.readValue("listing_index_name")+"_"+cluster.getCity_code(),
           (String) SubscriberLauncher.esConfigReader.readValue("listing_index_type"), query);
       JSONObject esResult = result.getJSONObject("aggregations");
       JSONArray uniqueProdBuckets = esResult.getJSONObject("unique_products").getJSONArray("buckets");
@@ -82,11 +102,12 @@ public class UpdatesHandler {
       intesection.retainAll(SubscriberLauncher.popularProductsSet);
       int popular_products_count = intesection.size();
       double rank = ((double) popular_products_count/(double)SubscriberLauncher.popularProductsSet.size());
-      coverageMap.put("rank",rank);
+      cluster.setRank(rank);
+
     }catch (Exception e){
       logger.error("Exception {}",e);
+      cluster.setRank(0);
     }
-    return coverageMap;
   }
 
   public void runDemon () {
@@ -96,54 +117,68 @@ public class UpdatesHandler {
     scheduledExecutorService.scheduleAtFixedRate(new Runnable() {
       public void run() {
 
-        ConcurrentHashMap<String,Set<EventMessage>> copyMap;
+        ConcurrentHashMap<String, Set<EventMessage>> copyMap;
         StringBuilder bulkDoc = new StringBuilder();
-        logger.info("Copy map is "+updatedStores);
+        logger.info("Copy map is " + updatedStores);
 
-        synchronized (updatedStores){
+        synchronized (updatedStores) {
           copyMap = new ConcurrentHashMap<String, Set<EventMessage>>(updatedStores);
           clearStores(updatedStores);
         }
 
+        ConcurrentHashMap<String,Store> storesMap = new ConcurrentHashMap<String, Store>();
+
+
         //active stores
-        for(EventMessage eventMessage: copyMap.get("active")){
-          List<String> clusterIds = getClustersWithStoreId(eventMessage.getStoreId(),eventMessage.getCityCode());
-          for(String clusterId: clusterIds){
-            bulkDoc.append("{\"update\": {\"_id\" : \""+clusterId+"\",\"_type\" : \""+SubscriberLauncher.esConfigReader.readValue("clusters_index_type")+"\", \"_index\" : \""+SubscriberLauncher.esConfigReader.readValue("clusters_index_name")+"_"+eventMessage.getCityCode()+"\"}}\n");
-            bulkDoc.append("{\"doc\": {\"status\":\"active\"}}\n");
-          }
-        }
+        //not doing anything for inactive to active
+
 
         //inactive stores
-        for(EventMessage eventMessage: copyMap.get("inactive")){
-          List<String> clusterIds = getClustersWithStoreId(eventMessage.getStoreId(),eventMessage.getCityCode());
-          for(String clusterId: clusterIds){
-            bulkDoc.append("{\"update\": {\"_id\" : \""+clusterId+"\",\"_type\" : \""+SubscriberLauncher.esConfigReader.readValue("clusters_index_type")+"\", \"_index\" : \""+SubscriberLauncher.esConfigReader.readValue("clusters_index_name")+"_"+eventMessage.getCityCode()+"\"}}\n");
-            bulkDoc.append("{\"doc\": {\"status\":\"inactive\"}}\n");
-          }
+        for (EventMessage eventMessage : copyMap.get("inactive")) {
+          Store store = new Store();
+          store.setId(eventMessage.getStoreId());
+          store.setIsActive(false);
+          store.setCityCode(eventMessage.getCityCode());
+          storesMap.put(eventMessage.getStoreId(),store);
         }
 
         //product coverage also updates rank
-        for(EventMessage eventMessage: copyMap.get("productChange")){
-          List<String> clusterIds = getClustersWithStoreId(eventMessage.getStoreId(),eventMessage.getCityCode());
-          for(String clusterId: clusterIds){
-            HashMap<String,Double> coverageMap = getCoverageOfCluster(clusterId,eventMessage.getCityCode());
-            bulkDoc.append("{\"update\": {\"_id\" : \""+clusterId+"\",\"_type\" : \""+SubscriberLauncher.esConfigReader.readValue("clusters_index_type")+"\", \"_index\" : \""+SubscriberLauncher.esConfigReader.readValue("clusters_index_name")+"_"+eventMessage.getCityCode()+"\"}}\n");
-            bulkDoc.append("{\"doc\": {\"rank\":\""+coverageMap.get("rank")+"\"}}\n");
+        for (EventMessage eventMessage : copyMap.get("productChange")) {
+          if(!storesMap.containsKey(eventMessage.getStoreId())){
+            Store store = new Store();
+            store.setId(eventMessage.getStoreId());
+            store.setIsActive(true);
+            store.setCityCode(eventMessage.getCityCode());
+            storesMap.put(eventMessage.getStoreId(),store);
           }
         }
 
-        logger.info("bulk doc is"+ bulkDoc);
+        //update rank for the clusters
+        ConcurrentHashMap<String,Cluster> clusters = getClustersWithStores(storesMap);
+        for(String key: clusters.keySet()){
+          Cluster cluster = clusters.get(key);
+          updateRankOfCluster(cluster);
+          StringBuilder storesString = new StringBuilder();
+          for(String activeStore : cluster.getActiveStores()){
+            storesString.append(",");
+            storesString.append("\"").append(activeStore).append("\"");
+          }
+          bulkDoc.append("{\"update\": {\"_id\" : \"" + key + "\",\"_type\" : \"" + SubscriberLauncher.esConfigReader.readValue("clusters_index_type") + "\", \"_index\" : \"" + SubscriberLauncher.esConfigReader.readValue("clusters_index_name") + "\"}}\n");
+          bulkDoc.append("{\"doc\": {\"rank\":\"" + cluster.getRank() + "\", \"stores\" : ["+storesString.toString().substring(1)+"]}}\n");
+        }
+
+
+        logger.info("bulk doc is" + bulkDoc);
 
         try {
-          if(!bulkDoc.toString().isEmpty()){
-            SubscriberLauncher.esClient.pushToESBulk("","",bulkDoc.toString());
+          if (!bulkDoc.toString().isEmpty()) {
+            SubscriberLauncher.esClient.pushToESBulk("", "", bulkDoc.toString());
           }
 
-        }catch (Exception e){
-          logger.error("Exception {}",e);
+        } catch (Exception e) {
+          logger.error("Exception {}", e);
         }
       }
-    },0,10, TimeUnit.MINUTES);
+    }, 0, 1, TimeUnit.MINUTES);
   }
 }

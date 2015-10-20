@@ -1,3 +1,5 @@
+package com.olastore.listing.consumers;
+
 import com.olastore.listing.clustering.utils.ConfigReader;
 import com.olastore.listing.consumers.scheduler.SubscriberLauncher;
 import com.olastore.listing.consumers.utils.Util;

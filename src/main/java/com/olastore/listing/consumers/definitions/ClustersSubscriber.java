@@ -52,19 +52,29 @@ public class ClustersSubscriber extends JedisPubSub implements Subscriber {
         if(messageObject.has("message")){
           //this event is an inverntory event
           EventMessage eventMessage = new EventMessage();
-          eventMessage.setCityCode(messageObject.getString("city_code"));
+          String city_code = messageObject.getString("city_code");
+          city_code = city_code.toLowerCase();
+          eventMessage.setCityCode(city_code);
           eventMessage.setStoreId(messageObject.getString("store_id"));
-          updatesHandler.updatedStores.get("productChange").add(eventMessage);
+          String cityCode = eventMessage.getCityCode().toLowerCase();
+          if(cityCode.contentEquals("vpm")){
+            updatesHandler.updatedStores.get("productChange").add(eventMessage);
+          }
         }else if(messageObject.has("collection_type")){
           //store update event
           EventMessage eventMessage = new EventMessage();
-          eventMessage.setCityCode(messageObject.getString("city_code"));
           eventMessage.setStoreId(messageObject.getString("store_id"));
-          if(messageObject.getString("state").contentEquals("active")){
-            updatesHandler.updatedStores.get("active").add(eventMessage);
-          }else if(messageObject.getString("state").contentEquals("inactive")){
-            updatesHandler.updatedStores.get("inactive").add(eventMessage);
+          String city_code = messageObject.getString("city_code");
+          city_code = city_code.toLowerCase();
+          eventMessage.setCityCode(city_code);
+          if(city_code.contentEquals("vpm")){
+            if(messageObject.getString("state").contentEquals("active")){
+              updatesHandler.updatedStores.get("active").add(eventMessage);
+            }else if(messageObject.getString("state").contentEquals("inactive")){
+              updatesHandler.updatedStores.get("inactive").add(eventMessage);
+            }
           }
+
         }
       }
     }catch (Exception e){

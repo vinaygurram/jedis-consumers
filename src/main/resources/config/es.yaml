@@ -11,7 +11,7 @@ geo_hash_index_name: geo_hashes
 geo_hash_index_type: hash
 clusters_index_name: geo_clusters
 clusters_index_type: cluster
-listing_index_name: listing
+listing_index_name: listing_index
 listing_index_type: list
 stores_index_name: stores_common
 stores_index_type: store
