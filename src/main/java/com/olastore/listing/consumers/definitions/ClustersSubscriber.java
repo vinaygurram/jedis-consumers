@@ -55,7 +55,7 @@ public class ClustersSubscriber extends JedisPubSub implements Subscriber {
           String city_code = messageObject.getString("city_code");
           city_code = city_code.toLowerCase();
           eventMessage.setCityCode(city_code);
-          eventMessage.setStoreId(messageObject.getString("store_id"));
+          eventMessage.setStoreId(messageObject.getInt("store_id")+"");
           String cityCode = eventMessage.getCityCode().toLowerCase();
           if(cityCode.contentEquals("vpm")){
             updatesHandler.updatedStores.get("productChange").add(eventMessage);
@@ -63,7 +63,7 @@ public class ClustersSubscriber extends JedisPubSub implements Subscriber {
         }else if(messageObject.has("collection_type")){
           //store update event
           EventMessage eventMessage = new EventMessage();
-          eventMessage.setStoreId(messageObject.getString("store_id"));
+          eventMessage.setStoreId(messageObject.getInt("store_id")+"");
           String city_code = messageObject.getString("city_code");
           city_code = city_code.toLowerCase();
           eventMessage.setCityCode(city_code);

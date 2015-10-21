@@ -20,3 +20,7 @@ hs_err_pid*
 *.iml
 out
 
+#maven
+target
+logs
+

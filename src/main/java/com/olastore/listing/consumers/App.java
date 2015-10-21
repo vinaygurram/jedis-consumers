@@ -32,7 +32,7 @@ public class App {
       ConfigReader redisConfigReader = new ConfigReader("config/redis.yaml");
       Set<String> popularProductsSet = new Util().initializePopularProductSet();
 
-      SubscriberLauncher subscriberLauncher = new SubscriberLauncher(esConfigReader,redisConfigReader,popularProductsSet,city,env);
+      SubscriberLauncher subscriberLauncher = new SubscriberLauncher(esConfigReader,redisConfigReader,popularProductsSet,env);
       subscriberLauncher.startListening();
 
     }catch (Exception e){

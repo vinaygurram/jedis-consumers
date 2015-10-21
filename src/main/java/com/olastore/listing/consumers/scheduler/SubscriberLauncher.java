@@ -17,17 +17,15 @@ public class SubscriberLauncher {
   public static ConfigReader esConfigReader;
   public static ConfigReader redisConfigReader;
   public static Set<String> popularProductsSet;
-  public static String city;
   public static String env;
   public static Logger logger = LoggerFactory.getLogger(SubscriberLauncher.class);
   public static ESClient esClient;
 
 
-  public SubscriberLauncher(ConfigReader esConfigReader, ConfigReader redisConfigReader, Set<String> popularProductsSet, String city, String env){
+  public SubscriberLauncher(ConfigReader esConfigReader, ConfigReader redisConfigReader, Set<String> popularProductsSet,  String env){
     this.esConfigReader = esConfigReader;
     this.redisConfigReader = redisConfigReader;
     this.popularProductsSet = popularProductsSet;
-    this.city = city;
     this.env = env;
     initializeESClient();
   }
