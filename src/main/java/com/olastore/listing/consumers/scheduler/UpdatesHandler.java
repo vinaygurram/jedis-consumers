@@ -217,6 +217,6 @@ public class UpdatesHandler {
           e.printStackTrace();
         }
       }
-    }, 0, 40, TimeUnit.SECONDS);
+    }, 0, 20, TimeUnit.MINUTES);
   }
 }
