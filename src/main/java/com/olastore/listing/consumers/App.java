@@ -20,12 +20,11 @@ public class App {
     try {
       logger.info("welcome");
       //read env and city
-      if(args.length<2 || args[0].isEmpty() ||args[1]==null || args[1].isEmpty()){
-        logger.error("First parameter env and second parameter city must not be null or empty");
+      if(args.length<1 || args[0].isEmpty()){
+        logger.error("First parameter env and must not be null or empty");
         return;
       }
       String env = args[0];
-      String city = args[1];
 
       //read config
       ConfigReader esConfigReader = new ConfigReader("config/es.yaml");
