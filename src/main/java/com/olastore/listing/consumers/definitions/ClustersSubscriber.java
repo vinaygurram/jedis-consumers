@@ -48,18 +48,15 @@ public class ClustersSubscriber extends JedisPubSub implements Subscriber {
     try {
       if(channel.contentEquals((String) SubscriberLauncher.redisConfigReader.readValue("redis_channel_name"))) {
         JSONObject messageObject = new JSONObject(message);
-        System.out.println(messageObject);
         if(messageObject.has("message")){
-          //this event is an inverntory event
+          //this event is an inventory event
           EventMessage eventMessage = new EventMessage();
           String city_code = messageObject.getString("city_code");
           city_code = city_code.toLowerCase();
           eventMessage.setCityCode(city_code);
           eventMessage.setStoreId(messageObject.getInt("store_id")+"");
-          String cityCode = eventMessage.getCityCode().toLowerCase();
-          if(cityCode.contentEquals("ggn")){
-            updatesHandler.updatedStores.get("productChange").add(eventMessage);
-          }
+          updatesHandler.updatedStores.get("productChange").add(eventMessage);
+          logger.info("Store for inventory change: "+messageObject.getInt("store_id"));
         }else if(messageObject.has("collection_type")){
           //store update event
           EventMessage eventMessage = new EventMessage();
@@ -67,14 +64,12 @@ public class ClustersSubscriber extends JedisPubSub implements Subscriber {
           String city_code = messageObject.getString("city_code");
           city_code = city_code.toLowerCase();
           eventMessage.setCityCode(city_code);
-          if(city_code.contentEquals("ggn")){
-            if(messageObject.getString("state").contentEquals("active")){
-              updatesHandler.updatedStores.get("active").add(eventMessage);
-            }else if(messageObject.getString("state").contentEquals("inactive")){
-              updatesHandler.updatedStores.get("inactive").add(eventMessage);
-            }
+          logger.info("Store for state change: "+messageObject.getInt("store_id"));
+          if(messageObject.getString("state").contentEquals("active")){
+            updatesHandler.updatedStores.get("active").add(eventMessage);
+          }else if(messageObject.getString("state").contentEquals("inactive")){
+            updatesHandler.updatedStores.get("inactive").add(eventMessage);
           }
-
         }
       }
     }catch (Exception e){

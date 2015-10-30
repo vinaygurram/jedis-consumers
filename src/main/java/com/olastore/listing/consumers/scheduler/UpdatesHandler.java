@@ -24,7 +24,6 @@ public class UpdatesHandler {
 
   public void clearStores(ConcurrentHashMap<String, Set<EventMessage>> map){
     //make empty hashsets
-    System.out.println("clear stores happened");
     map.put("active", new HashSet<EventMessage>());
     map.put("inactive",new HashSet<EventMessage>());
     map.put("online",new HashSet<EventMessage>());
@@ -42,7 +41,6 @@ public class UpdatesHandler {
         storeIdString.append(',');
         storeIdString.append("\""+storeId+"\"");
       }
-      logger.info("Store ids is "+ storeIdString);
       String query = "{\"size\" : 3000,\"query\":{\"terms\":{\"stores\":["+storeIdString.toString().substring(1)+"]}}}";
       JSONObject result = SubscriberLauncher.esClient.searchES((String)SubscriberLauncher.esConfigReader.readValue("clusters_index_name"),(String)SubscriberLauncher.esConfigReader.readValue("clusters_index_type"),query);
       result = result.getJSONObject("hits");
@@ -95,14 +93,12 @@ public class UpdatesHandler {
       Set<String> stores  =  cluster.getActiveStores();
       if(stores.size()==0){
         cluster.setRank(0d);
-        System.out.println("sdfds sdsf " + cluster.getId());
         return;
       }
       String storeIdString = "";
       for(String s: stores){
         storeIdString += "\""+s+"\",";
       }
-      System.out.println("storesId string is "+storeIdString);
       storeIdString = storeIdString.substring(0,storeIdString.length()-1);
 
       String query = "{\"size\": 0,\"query\":{\"filtered\":{\"filter\":{\"bool\":{\"must\":[" +
@@ -110,22 +106,20 @@ public class UpdatesHandler {
           "{\"term\":{\"product_details.available\":true}}," +
           "{\"term\":{\"product_details.status\":\"current\"}}]}}}}," +
           "\"aggregations\":{\"unique_products\":{\"terms\":{\"field\":\"product_details.id\",\"size\":0}}}}";
-      System.out.println(query);
       JSONObject result = SubscriberLauncher.esClient.searchES((String) SubscriberLauncher.esConfigReader.readValue("listing_index_name")+"_"+cluster.getCity_code(),
           (String) SubscriberLauncher.esConfigReader.readValue("listing_index_type"), query);
-      System.out.println(result);
       JSONObject esResult = result.getJSONObject("aggregations");
       JSONArray uniqueProdBuckets = esResult.getJSONObject("unique_products").getJSONArray("buckets");
       for(int i=0;i<uniqueProdBuckets.length();i++){
         String productId = uniqueProdBuckets.getJSONObject(i).getString("key");
         productsSet.add(productId);
       }
-
       Set<String> intesection = new HashSet<String>(productsSet);
       intesection.retainAll(SubscriberLauncher.popularProductsSet);
       int popular_products_count = intesection.size();
       double rank = ((double) popular_products_count/(double)SubscriberLauncher.popularProductsSet.size());
       cluster.setRank(rank);
+      logger.info("Rank computed for cluster "+storeIdString+" is "+rank);
 
     }catch (Exception e){
       logger.error("Exception {}",e);
@@ -144,7 +138,7 @@ public class UpdatesHandler {
 
           HashMap<String, Set<EventMessage>> copyMap;
           StringBuilder bulkDoc = new StringBuilder();
-          logger.info("Copy map is " + updatedStores);
+          logger.info("Stores queued for update are " + updatedStores);
 
           synchronized (updatedStores) {
             copyMap = new HashMap<String, Set<EventMessage>>(updatedStores);
@@ -191,6 +185,7 @@ public class UpdatesHandler {
                 storesString.append(",");
                 storesString.append("\"").append(activeStore).append("\"");
               }
+              logger.info("Updating the cluster "+key+" with active stores "+storesString.toString());
               bulkDoc.append("{\"update\": {\"_id\" : \"" + key + "\",\"_type\" : \"" + SubscriberLauncher.esConfigReader.readValue("clusters_index_type") + "\", \"_index\" : \"" + SubscriberLauncher.esConfigReader.readValue("clusters_index_name") + "\"}}\n");
               if(cluster.getActiveStores().size()==0){
                 bulkDoc.append("{\"doc\": {\"rank\":\"" + cluster.getRank() + "\", \"stores\" : []}}\n");
@@ -201,7 +196,6 @@ public class UpdatesHandler {
                 count =0;
                 try {
                   if (!bulkDoc.toString().isEmpty()) {
-                    logger.info("bulk doc is" + bulkDoc);
                     SubscriberLauncher.esClient.pushToESBulk("", "", bulkDoc.toString());
                     Thread.sleep(3000);
                     bulkDoc = new StringBuilder();

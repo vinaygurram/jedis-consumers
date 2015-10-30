@@ -18,7 +18,6 @@ public class App {
   public static void main(String[] args) {
 
     try {
-      logger.info("welcome");
       //read env and city
       if(args.length<1 || args[0].isEmpty()){
         logger.error("First parameter env and must not be null or empty");
