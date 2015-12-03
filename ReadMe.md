@@ -1,9 +1,9 @@
-##Consumers for Clusters##
+## Consumers for Clusters
 
 This project aim to update the clusters on periodic basis. 
 
 
-####Story :: 
+### Story :: 
 Clustering will take events from listing. Once events are successful listing will push the events into redis pub sub. Clustering will pick up
 the events from redis pub sub.
 
