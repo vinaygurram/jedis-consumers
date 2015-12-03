@@ -36,7 +36,7 @@ From clusters POV, an event can be store_update or a product_update. Clusters co
  * Complete listing deployment on listing 01.
  * find the pid of the running consumer and not it down
  ```ps -eaf | grep '[c]luster-consumer' | gawk 'NR==1{print $2}'```
- *start  new clusters consumer using the following command
+ * start  new clusters consumer using the following command
  ```
  cd /usr/share/ola/listing-service/bin/clusters/
  nohup java -jar cluster-consumer-1.0-jar-with-dependencies.jar prod >>/usr/share/ola/logs/listing-service/production.log &
