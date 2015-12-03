@@ -30,9 +30,9 @@ From clusters POV, an event can be store_update or a product_update. Clusters co
  * Make jar file with all the dependencies for QA by changing the time from 20 minutes to 1 minute and then create 
  jar using 
  ``` mvn clean install```
- rename the jar to _target/cluster-consumer-1.0-jar-with-dependencies_qa.jar_
+ rename the jar to *target/cluster-consumer-1.0-jar-with-dependencies_qa.jar*
  * Push your changes to release branch. Add a tag if you like.
- * copy both the jar files to _$LISTING_HOME/bin/clusters
+ * copy both the jar files to *$LISTING_HOME/bin/clusters*
  * Complete listing deployment on listing 01.
  * find the pid of the running consumer and not it down
  ```ps -eaf | grep '[c]luster-consumer' | gawk 'NR==1{print $2}'```
