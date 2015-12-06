@@ -1,0 +1,16 @@
+redis_host_dev: "localhost"
+redis_port_dev: 6379
+
+redis_host_stage: "localhost"
+redis_port_stage: 6379
+
+redis_host_qa: "localhost"
+redis_port_qa: 6379
+
+redis_host_perf: "redis.perf.olahack.in"
+redis_port_perf: 6379
+
+redis_host_prod: "redis-customer.internal.olastore.com"
+redis_port_prod: 6379
+
+redis_channel_name: cluster_updates
